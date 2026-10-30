@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de recolección de basura</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Recolección de basura</h1>
+    <aside>
+      <label>Ciudad</label>
+      <select id="ciudad">
+        <option value="1">Reynosa</option>
+        <option value="2">Tampico</option>
+        <option value="3">Ciudad Victoria</option>
+      </select>
+      <label>País</label>
+      <input id="pais" value="México" disabled>
+
+      <label>Filas</label>
+      <input id="filas" type="number">
+      <label>Columnas</label>
+      <input id="columnas" type="number">
+      <label>Orgánicos</label>
+      <input id="organicos" type="number" value="5">
+      <label>Reciclables</label>
+      <input id="reciclables" type="number" value="5">
+      <label>No reciclables</label>
+      <input id="no-reciclables" type="number" value="5">
+      <button id="generar">Generar puntos</button>
+      <button id="calcular">Calcular rutas</button>
+      <button id="reiniciar">Reiniciar</button>
+      <p id="mensaje"></p>
+    </aside>
+    <section id="zona-malla">
+      <h2>Malla de la Ciudad</h2>
+      <h3>Notación</h3>
+      <p><span class="color organico"></span> Orgánico</p>
+      <p><span class="color reciclable"></span> Inorgánico Reciclable</p>
+      <p><span class="color no-reciclable"></span> Inorgánico No Reciclable</p>
+      <table id="tabla-malla" aria-label="Malla de puntos de recolección" td="50"></table>
+  
+      <div id="comparacion"></div>
+      <div id="resultados">
+        <section id="ruta-original">
+          <h2>Ruta original</h2>
+          <label>Tipo de residuo</label>
+            <select id="tipo">
+              <option value="1">Orgánico</option>
+              <option value="2">Inorgánico reciclable</option>
+              <option value="3">Inorgánico no reciclable</option>
+            </select>
+          
+            <p id="informacion-ruta">Sin ruta calculada</p>
+        </section>
+        <section id="ruta-optimizada">
+          <h2>Ruta optimizada</h2>
+            <p id="informacion-optimizada">Sin optimización</p>
+            <button id="optimizar">Optimizar ruta</button>
+    </section>
+
+</div>
+    </section>
+  </main>
+</body>
+</html>
